@@ -1,0 +1,51 @@
+.entire {
+    width: 360px;
+    height: 480px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    position: absolute;
+}
+
+div {
+    text-align: center;
+}
+
+.name {
+    color: rgb(170, 115, 12);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.text {
+    margin-left: 30px;
+    width: 300px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid orange;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.texted {
+    color: rgb(170, 115, 12);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tiger {
+    color: rgb(219, 151, 24);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.white {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.black {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 600;
+}

@@ -1,0 +1,28 @@
+.entire {
+    width: 360px;
+    height: 480px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid black;
+    position: absolute;
+}
+
+.name {
+    color: rgb(170, 115, 12);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.explain {
+    color: white;
+    font-size:14px;
+}
+
+div {
+    text-align: center;
+}
+
+.submit {
+    color: rgb(37, 26, 5);
+    width: 300px;
+    margin-top: 13px;
+}

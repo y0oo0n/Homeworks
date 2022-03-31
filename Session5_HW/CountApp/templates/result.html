@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}">
+</head>
+<body>
+    <div class="entire">
+        <h3 class="name">🦁윤정윤정윤과 함께하는 글자세기🦁</h3>
+        <div class="text">
+            <p class="texted">입력한 텍스트: </p>
+            <p class="black"> {{text}} </p>
+        </div>
+
+        <div class="answer">
+            <span class="tiger">🐅글자수: </span>
+            <span class="white"> {{total_len}} </span>
+        </div>
+
+        <div class="answer">
+            <span class="tiger">🐅공백제외 글자수: </span>
+            <span class="white"> {{no_blank_len}} </span>
+        </div>
+
+        <div class="answer">
+            <span class="tiger">🐅단어수: </span>
+            <span class="white"> {{word}} </span>
+        </div>
+        </form>
+    </div>
+
+
+</body>
+</html>
