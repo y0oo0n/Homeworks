@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>🦁 정윤이의 BLOG 🦁</h1>
+    <ul>
+        <li><a href={% url 'hobby' %}>Hobby</a>
+            [게시글 수 : {{hobby.count}}]<br>
+        </li>
+        <li><a href={% url 'food' %}>Food</a>
+            [게시글 수 : {{food.count}}]<br>
+        </li>
+        <li><a href={% url 'programming' %}>Programming</a>
+            [게시글 수 : {{programming.count}}]<br>
+        </li>
+    </ul>
+
+    <a href="{% url 'new' %}"> 새로운 글쓰기</a>
+</body>
+</html>

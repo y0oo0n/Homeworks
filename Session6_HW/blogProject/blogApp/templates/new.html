@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>🦁 정윤이는 글쓰는 중 🦁</h2>
+    <form action="/new" method="post">
+        {% csrf_token %}
+        <div>
+            <div>글 제목</div>
+            <input type="text" name="title" />
+        </div>
+        <div>
+            <select name="category">
+                <optgroup>
+                    <option name="hobby">Hobby</option>
+                    <option name="food">Food</option>
+                    <option name="programming">Programming</option>
+                </optgroup>
+            </select>
+        </div>
+        <div>
+            <div>글 내용</div>
+            <textarea name="content" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit">블로그에 추가하기</button>
+    </form>
+</body>
+</html>
