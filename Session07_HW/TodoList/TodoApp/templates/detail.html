@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Detail</title>
+
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
+
+    <link href="{% static 'detail.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="contents">
+            <h1>🦁 Список дел 🦁</h1>
+            <br/>
+            <div>
+                <h2 class="rus">📃заглавие</h2>
+                <p>{{ todo.title }}</p>
+            </div>
+            <br/>
+            <div>
+                <h2 class="rus">📃подробности</h2>
+                <p>{{ todo.content }}</p>
+            </div>
+            <br/>
+            <div>
+                <h2 class="rus">📅срок погашения</h2>
+                <p>{{ todo.deadline|date:'Y-m-d'}}</p>
+            </div>
+            <br/>
+
+            <a class="rus" href="{% url 'home' %}">вернуться к списку➰</a> &nbsp; &nbsp;
+            <a class="rus" href="{% url 'edit' todo.pk %}">редактировать✔</a> &nbsp; &nbsp;
+            <a class="rus" href="{% url 'delete' todo.pk %}">удалить✖</a>
+
+        </div>
+    </div>
+</body>
+</html>

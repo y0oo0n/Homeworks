@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Edit</title>
+
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
+
+    <link href="{% static 'edit.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="contents">
+            <h1>🦁 Список дел 🦁</h1>
+            <br/>
+            <form action="" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="title" class="rus">📃заглавие</label>
+                    <br/><input type="text" id="title" name="title" width="60" value="{{ todo.title }}" placeholder="제목 입력✍">
+                </div>
+                <br/>
+                <div>
+                    <label for="content" class="rus">📃подробности</label>
+                    <br/><textarea name="content" id="content" cols="60" rows="10" placeholder="내용 입력✍">{{ todo.content }}</textarea>
+                </div>
+                <br/>
+                <div>
+                    <label for="deadline" class="rus">📅срок погашения</label><br/>
+                    <input type="date" name="deadline" id="deadline" placeholder="마감기한 입력✍">
+                </div>
+                <br/>
+                <button type="submit" class="rus">редактировать ✔</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

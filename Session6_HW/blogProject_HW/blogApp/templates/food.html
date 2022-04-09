@@ -8,10 +8,10 @@
 </head>
 <body>
     <h2>🦁 Food that 정윤 loves 🦁</h2>
-    {% for food in drama %}
+    {% for food in food %}
     <ul>
         <li>
-            <a href="{% url 'detail' drama.pk %}">{{ drama.title }}</a>
+            <a href="{% url 'detail' food.pk %}">{{ food.title }}</a>
         </li>
     </ul>
     {% endfor %}

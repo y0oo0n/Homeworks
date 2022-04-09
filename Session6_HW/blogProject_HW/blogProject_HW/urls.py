@@ -1,4 +1,4 @@
-"""blogProject URL Configuration
+"""blogProject_HW URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -26,3 +26,4 @@ urlpatterns = [
     path('food', views.food, name='food'),
     path('programming', views.programming, name='programming'),
 ]
+
