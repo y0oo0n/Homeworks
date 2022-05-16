@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>응원가 수정</title>
+
+    {% load static %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
+
+    <link href="{% static 'new.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="banner">
+        <h1>🥁 정윤's 응원가 PLAYLIST 🥁</h1>
+    </div>
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="title">🎵응원가 제목🎵</label>
+                <br/><input type="text" id="title" name="title" width="60" value="{{ song.title }}" placeholder="📃응원가 가사📃">
+            </div>
+            <br/>
+            <div>
+                <label for="content">📃응원가 가사📃</label>
+                <br/><textarea name="content" id="content" cols="60" rows="10" placeholder="응원가 가사를 입력해주세요✍">{{ song.content }}</textarea>
+            </div>
+            <br/>
+            <button type="submit" class="rus"> 응원가 수정 ✔</button>
+        </form>
+    </div>
+</body>
+</html>

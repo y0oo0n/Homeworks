@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>응원가 모음</title>
+</head>
+<body>
+    <div id="banner">
+        <h1>🥁 정윤's 응원가 PLAYLIST 🥁</h1>
+    </div>
+    <div class="container">
+        <ul>
+            {% for song in songs %}
+            <li>
+                <a class="title" href="{% url 'song' song.pk %}">{{ song.title }}</a>
+                <span></span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="add">
+        <a id="add" href="{% url 'new' %}"> 응원가 추가하기✍ </a>
+    </div>
+</body>
+</html>
