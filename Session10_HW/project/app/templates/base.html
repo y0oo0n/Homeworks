@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
+
+    {% block css %}
+
+    {% endblock css %}
+    <title>Yoon's playlist</title>
+</head>
+<body>
+    <div class="header">
+        <div id="banner">
+            <h1>🥁 정윤's 응원가 PLAYLIST 🥁</h1>
+        </div>
+        {% block header %}
+
+        {% endblock header %}
+    </div>
+
+        {% block content %}
+
+        {% endblock content %}
+
+    <div class="footer">
+        <h4>- 멋실렌티에 참여하고 싶다면 언제든 연락주세요 -</h4>
+        <h4> 윤정윤 / 010-3504-9328 / @y0o_o0n </h4>
+    </div>
+
+</body>
+</html>

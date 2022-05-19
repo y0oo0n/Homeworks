@@ -1,0 +1,37 @@
+body {
+    background-color: #d33c16;  
+    text-align: left;  
+    margin: 0;
+    color: #ffffff;
+    font-weight:600;
+  }
+
+.comment {
+    font-size: 13px;
+    color: rgb(193, 189, 189);
+}
+
+.container {
+    width: 500px;
+    border: solid 5px #ffffff;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+a:link {
+    color : #d4ec1c;
+}
+
+a:visited {
+    color : #d4ec1c;
+}
+
+form > input {
+    box-sizing:border-box;
+    border: 1px solid #898989;
+    border-radius:5px;
+    height:25px;
+}
+
