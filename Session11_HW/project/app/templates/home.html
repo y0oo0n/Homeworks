@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block title %}
+Show all playlist
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <ul>
+            {% for song in songs %}
+            <li>
+                <a class="title" href="{% url 'song' song.pk %}">{{ song.title }}</a>
+                <span></span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="add">
+        <a id="add" href="{% url 'new' %}"> 응원가 추가하기✍ </a>
+    </div>
+    
+{% endblock content %}

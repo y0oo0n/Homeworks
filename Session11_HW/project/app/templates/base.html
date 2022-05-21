@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %} {% load socialaccount %}{% providers_media_js %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
+
+    {% block css %}
+
+    {% endblock css %}
+    <title>Yoon's playlist</title>
+</head>
+<body>
+    <div class="header">
+        <div id="banner">
+            <h1>🥁 정윤's 응원가 PLAYLIST 🥁</h1>
+        </div>
+        <nav id="navbar">
+            <ul class="navbar__menu">
+              <li class="navbar__menu__item"><a href="{% url 'new' %}">New</a></li>
+              <li class="navbar__menu__item">
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+              {% if user.is_authenticated %}
+              <span class="navbar__menu__item">안녕, {{user.username}}</span>
+              <li class="navbar__menu__item"><a href="{% url 'logout' %}">로그아웃</a></li>
+              {% else %}
+              <li class="navbar__menu__item"><a href="{% url 'login' %}">로그인</a></li>
+              <li class="navbar__menu__item"><a href="{% url 'signup' %}">회원가입</a></li>
+      <!--<li class="navbar__menu__item"><a href="{% provider_login_url 'kakao' %}">카카오 로그인</a></li>-->
+              <form
+                class="login"
+                method="POST"
+                action="{% provider_login_url 'kakao' %}"
+              >
+                {% csrf_token %} {{ form.as_p }} {% if redirect_field_value %}
+                <input
+                  type="hidden"
+                  name="{{ redirect_field_name }}"
+                  value="{{ redirect_field_value }}"
+                />
+                {% endif %}
+                {% endif %}
+                <button class="primaryAction" type="submit">카카오 로그인</button>
+              </form>
+            </ul>
+          </nav>
+        {% block header %}
+
+        {% endblock header %}
+    </div>
+
+        {% block content %}
+
+        {% endblock content %}
+
+    <div class="footer">
+        <h4>- 멋실렌티에 참여하고 싶다면 언제든 연락주세요 -</h4>
+        <h4> 윤정윤 / 010-3504-9328 / @y0o_o0n </h4>
+    </div>
+
+</body>
+</html>

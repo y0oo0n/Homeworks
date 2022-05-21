@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link href="{% static 'song.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Details of Song
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div>
+            <h2>🎵응원가 제목🎵</h2>
+            <h3>{{ song.title }}</h3>
+        </div>
+        <div>
+            <h2>📃응원가 가사📃</h2>
+            <p>{{ song.content }}</p>
+        </div>
+        <br/>
+
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="content" placeholder="댓글을 입력해주세요">
+            <button type="submit">작성하기</button>
+        </form>
+
+        {% for comment in song.comments.all %}
+        <li class="comment">
+            {{comment.content}}
+            {% if user.is_authenticated and comments.author.pk == user.pk %}
+            <a href="{% url 'delete-comment' song.pk comment.pk %}">댓글삭제</a>
+        </li>
+        {% endfor %}
+
+        <br/><br/>
+
+
+            <a href="{% url 'home' %}"> 플레이리스트 전체보기</a> &nbsp; &nbsp;
+            {% if user.is_authenticated and songs.author.pk == user.pk %}
+            <a href="{% url 'edit' song.pk %}"> 수정하기 ✔</a> &nbsp; &nbsp;
+            <a href="{% url 'delete' song.pk %}"> 지우기 ✖</a>
+            <br/>
+    </div>
+
+{% endblock content %}

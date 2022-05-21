@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link href="{% static 'new.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Edit Song
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="title">🎵응원가 제목🎵</label>
+                <br/><input type="text" id="title" name="title" width="60" value="{{ song.title }}" placeholder="📃응원가 가사📃">
+            </div>
+            <br/>
+            <div>
+                <label for="content">📃응원가 가사📃</label>
+                <br/><textarea name="content" id="content" cols="60" rows="10" placeholder="응원가 가사를 입력해주세요✍">{{ song.content }}</textarea>
+            </div>
+            <br/>
+            <button type="submit" class="rus"> 응원가 수정 ✔</button>
+        </form>
+    </div>
+
+{% endblock content %}

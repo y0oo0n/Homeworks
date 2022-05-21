@@ -1,0 +1,47 @@
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+h2 {
+    font-size: 30px;
+    font-weight:800;
+}
+
+
+.container {
+    background-color: #fff; 
+    width: 500px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.add {
+    width: 480px;
+    border: solid 5px #ffffff;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+a:link {
+    color : #b60606
+}
+
+a:visited {
+    color : #b60606
+}
+
+.add a:link {
+    color : #FFB30F
+}
+
+.add a:visited {
+    color : #FFB30F
+}
