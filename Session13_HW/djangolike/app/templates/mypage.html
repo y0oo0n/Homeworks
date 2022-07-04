@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  좋아요 누른 글
+  <div>
+    <!-- <p>좋아요 누른 글만 표시합시다</p> -->
+  </div>
+  {% for like in user.likes.all %}
+<a class="post-item" href="{% url 'detail' like.post.pk %}">
+  <h4>{{like.post.title}}</h4>
+</a>
+{% endfor %}
+</div>
+
+<div>
+  찜하기 누른 글
+  <div>
+    <!-- <p>찜하기 누른 글만 표시합시다</p> -->
+  </div>
+  {% for scrap in user.scraps.all %}
+<a class="post-item" href="{% url 'detail' scrap.post.pk %}">
+  <h4>{{scrap.post.title}}</h4>
+</a>
+{% endfor %}
+
+
+{% endblock content %}
