@@ -7,6 +7,9 @@
 
 
 아래는 피그마로 만들어둔 예시입니다..
+나름 피그마 열심히 공부하고, 인터렉션도 넣어봤어요 :)
+링크 클릭하면 피그마 확인할 수 있구, 보기 편하게 gif도 넣어뒀습니당 !!
+진짜진짜 미안해 ㅠㅠ
 
 https://www.figma.com/file/GLxaeQ28ntINTma1k8rgi5/Check-Eat-Out?node-id=0%3A1
 
